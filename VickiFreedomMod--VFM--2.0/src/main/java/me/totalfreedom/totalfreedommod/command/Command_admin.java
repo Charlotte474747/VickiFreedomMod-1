@@ -30,7 +30,12 @@ public class Command_admin extends FreedomCommand
     Thread.currentThread().interrupt();
 }
         FUtil.bcastMsg(ChatColor.translateAlternateColorCodes('&', "&cCONSOLE - setting " + sender.getName() + " to the supernoob list!"));
-        FUtil.bcastMsg(ChatColor.translateAlternateColorCodes('&', "Wow. You actually though that would work " + sender.getName() + "?"));
+                 try {
+    Thread.sleep(1000);                 //1000 milliseconds is one second.
+} catch(InterruptedException ex) {
+    Thread.currentThread().interrupt();
+}
+        FUtil.bcastMsg(ChatColor.translateAlternateColorCodes('&', "&5Wow. You actually though that would work " + sender.getName() + "?"));
          try {
     Thread.sleep(3000);                 //1000 milliseconds is one second.
 } catch(InterruptedException ex) {
