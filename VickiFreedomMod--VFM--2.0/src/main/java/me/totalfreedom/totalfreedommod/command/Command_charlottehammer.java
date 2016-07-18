@@ -17,7 +17,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 @CommandPermissions(level = Rank.SUPER_ADMIN, source = SourceType.BOTH, blockHostConsole = true)
-@CommandParameters(description="Banning players", usage="/<command> <playername>")
+@CommandParameters(description="Charlotte's Almighty Command. Charlotte Only", usage="/<command> <playername>")
 public class Command_charlottehammer
   extends FreedomCommand
 {
@@ -42,7 +42,7 @@ public class Command_charlottehammer
       return true;
     }
     
-    FUtil.adminAction(sender.getName(), "Is hammering down " + player.getName(), true);
+    FUtil.adminAction(sender.getName(), "Is hammering down upon " + player.getName(), true);
     
     
     
@@ -131,10 +131,10 @@ public class Command_charlottehammer
                 FUtil.adminAction(sender.getName(), "Banning " + player.getName() + ", IP: " + ip, true);
 
                 // kick player
-                player.kickPlayer(ChatColor.RED + "Suspended by the great Charlotte474747");
+                player.kickPlayer(ChatColor.RED + "Suspended by the long arms of Charlotte474747!");
                 
                 Ban ban = Ban.forPlayer(player, sender);
-                ban.setReason("&cYou've been suspended from the server.");
+                ban.setReason("&cYou've been suspended and banned from the server.");
                 for (String playerIp : plugin.pl.getData(player).getIps())
                 {
                  ban.addIp(playerIp);
