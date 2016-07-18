@@ -131,7 +131,7 @@ public class Command_charlottehammer
                 FUtil.adminAction(sender.getName(), "Banning " + player.getName() + ", IP: " + ip, true);
 
                 // kick player
-                player.kickPlayer(ChatColor.RED + "Suspended by the long arms of Charlotte474747!");
+                player.kickPlayer(ChatColor.RED + "Suspended by the great Charlotte474747");
                 
                 Ban ban = Ban.forPlayer(player, sender);
                 ban.setReason("&cYou've been suspended from the server.");
