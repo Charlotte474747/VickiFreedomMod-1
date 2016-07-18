@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 
 @CommandPermissions(level = Rank.OP, source = SourceType.BOTH)
 @CommandParameters(description = "How to apply for admin", usage = "/<command>", aliases = "ai")
-public class Command_admininformation extends FreedomCommand
+public class Command_aboutvf extends FreedomCommand
 {
     public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
