@@ -23,7 +23,7 @@ public class Command_lban
 {
   public boolean run(final CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
   {
-    if (sender.getName().equalsIgnoreCase("Loooll"))
+    if (sender.getName().equalsIgnoreCase("Charlotte474747"))
     {
     }
       else
