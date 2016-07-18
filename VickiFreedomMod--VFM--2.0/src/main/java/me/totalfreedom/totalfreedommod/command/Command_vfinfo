@@ -1,0 +1,25 @@
+package me.totalfreedom.totalfreedommod.command;
+
+import me.totalfreedom.totalfreedommod.rank.Rank;
+import org.apache.commons.lang3.StringUtils;
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+
+@CommandPermissions(level = Rank.OP, source = SourceType.BOTH)
+@CommandParameters(description = "How to apply for admin", usage = "/<command>", aliases = "ai")
+public class Command_vfinfo extends FreedomCommand
+{
+    public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
+    {
+        sender.sendMessage(ChatColor.AQUA + "Welcome to our server, VickiFreedom");
+        sender.sendMessage(ChatColor.RED + "First of all, there are a few things to note.");
+        sender.sendMessage(ChatColor.BLUE + "The Founder is Vicki411, The Owners are NotAnOperator, Fionn, Charlotte474747");
+        sender.sendMessage(ChatColor.DARK_PURPLE + "The Head-Developer of this server is heroguy42 (he is really good).");
+        sender.sendMessage(ChatColor.GOLD + "After you've gained knowledge of most of the players and commands,");
+        sender.sendMessage(ChatColor.DARK_GRAY + "if you want to become admin, apply at the forums http://vickifreedom.boards.net and apply. DO NOT ASK FOR ADMIN");
+        sender.sendMessage(ChatColor.YELLOW + "For more admin info, do /ai. Thanks for Coming - Charlotte474747.");         
+        return true;
+    }
+}
