@@ -95,9 +95,11 @@ public enum Rank implements Displayable
     {
         switch (this)
         {
-            case TELNET_ADMIN:
-            case TELNET_CONSOLE:
+            case TELNET_ADMIN: 
+            case TELNET_CONSOLE: 
+            case TELNET_CLAN_ADMIN: {
                 return TELNET_CONSOLE;
+            }
             case SENIOR_ADMIN:
             case SENIOR_CONSOLE:
                 return SENIOR_CONSOLE;
@@ -122,9 +124,8 @@ public enum Rank implements Displayable
         switch (this)
         {
             case TELNET_ADMIN: 
-            case TELNET_CONSOLE: 
-            case TELNET_CLAN_ADMIN: {
-                return TELNET_CONSOLE;
+            case TELNET_CONSOLE: {
+                return TELNET_ADMIN;
             }
             case SENIOR_ADMIN:
             case SENIOR_CONSOLE:
