@@ -58,9 +58,9 @@ public class RankManager extends FreedomService
         {
             return Title.VFMDEVELOPER;
         }
-        if (FUtil.VFMLDEVELOPERS.contains(player.getName()))
+        if (FUtil.VFMLEADDEVELOPERS.contains(player.getName()))
         {
-            return Title.VFMLDEVELOPERS
+            return Title.VFMLEADDEVELOPERS
         }
         
         final Rank rank = getRank(player);
