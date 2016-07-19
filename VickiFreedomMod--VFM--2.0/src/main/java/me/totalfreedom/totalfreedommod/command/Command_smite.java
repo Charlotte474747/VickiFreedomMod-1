@@ -40,6 +40,11 @@ public class Command_smite extends FreedomCommand
 
         smite(player, reason);
         return true;
+         if (plugin.al.isAdmin(player))
+        {
+            msg(ChatColor.RED + "You can not smite administrators");
+            return true;
+        }
     }
 
     public static void smite(Player player)
