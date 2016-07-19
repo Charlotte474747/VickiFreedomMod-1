@@ -21,6 +21,7 @@ public enum Rank implements Displayable
     EXECUTIVE_CONSOLE("the", "Console", Type.ADMIN_CONSOLE, "Console", ChatColor.DARK_PURPLE),
     SYSADMIN_CONSOLE("the", "Console", Type.ADMIN_CONSOLE, "Console", ChatColor.DARK_PURPLE),
     CHIP("is", "Chip", Type.ADMIN_CONSOLE, "Chip", ChatColor.GREEN),
+    PUG("a", "Pug", Type.ADMIN_CONSOLE, "Pug", ChatColor.GOLD),
     OWNER_CONSOLE("the", "Console", Type.ADMIN_CONSOLE, "Console", ChatColor.DARK_PURPLE);
     @Getter
     private final Type type;
@@ -95,11 +96,9 @@ public enum Rank implements Displayable
     {
         switch (this)
         {
-            case TELNET_ADMIN: 
-            case TELNET_CONSOLE: 
-            case TELNET_CLAN_ADMIN: {
+            case TELNET_ADMIN:
+            case TELNET_CONSOLE:
                 return TELNET_CONSOLE;
-            }
             case SENIOR_ADMIN:
             case SENIOR_CONSOLE:
                 return SENIOR_CONSOLE;
@@ -114,6 +113,8 @@ public enum Rank implements Displayable
                 return OWNER_CONSOLE;
             case CHIP:
                 return CHIP;
+            case PUG:
+                return PUG;
             default:
                 return null;
         }
@@ -124,8 +125,9 @@ public enum Rank implements Displayable
         switch (this)
         {
             case TELNET_ADMIN: 
-            case TELNET_CONSOLE: {
-                return TELNET_ADMIN;
+            case TELNET_CONSOLE: 
+            case TELNET_CLAN_ADMIN: {
+                return TELNET_CONSOLE;
             }
             case SENIOR_ADMIN:
             case SENIOR_CONSOLE:
@@ -141,6 +143,8 @@ public enum Rank implements Displayable
                 return OWNER;
             case CHIP:
             return CHIP;
+            case PUG:
+            return PUG;
             default:
                 return null;
         }
