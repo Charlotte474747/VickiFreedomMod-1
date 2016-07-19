@@ -18,7 +18,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 @CommandPermissions(level = Rank.SUPER_ADMIN, source = SourceType.BOTH, blockHostConsole = true)
 @CommandParameters(description="Puggy wuggy! Destroy your foes with pugs!", usage="/<command> <playername>")
-public class Command_charlottehammer
+public class Command_pug
   extends FreedomCommand
 {
   public boolean run(final CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
