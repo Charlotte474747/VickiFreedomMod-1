@@ -9,7 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(level = Rank.OP, source = SourceType.ONLY_IN_GAME)
-@CommandParameters(description = "be right back!", usage = "/<command>", aliases = "brb")
+@CommandParameters(description = "Modified and Updated /afk", usage = "/<command>", aliases = "brb")
 public class Command_brb extends FreedomCommand
 {
 
@@ -19,7 +19,7 @@ public class Command_brb extends FreedomCommand
 
         FPlayer playerdata = plugin.pl.getPlayer(playerSender);
         playerdata.setBrb(!playerdata.brb());
-        FUtil.bcastMsg(sender.getName() + " is" + (playerdata.brb() ? " away from keyboard, and will be right back!" : " now back!"), ChatColor.GOLD);
+        FUtil.bcastMsg(sender.getName() + " is" + (playerdata.brb() ? " I will be right back!" : " Hello i am now back!"), ChatColor.GOLD);
 
         return true;
     }
