@@ -14,7 +14,7 @@ import org.bukkit.entity.Player;
 
 
 
-@CommandPermissions(level = Rank.OP, source = SourceType.ONLY_IN_GAME)
+@CommandPermissions(level = Rank.SUPER_ADMIN, source = SourceType.ONLY_IN_GAME)
 @CommandParameters(description = "WHAT IS UP DRAMAALERT NATION", usage = "/<command>")
 public class Command_dramaalert extends FreedomCommand
 {
