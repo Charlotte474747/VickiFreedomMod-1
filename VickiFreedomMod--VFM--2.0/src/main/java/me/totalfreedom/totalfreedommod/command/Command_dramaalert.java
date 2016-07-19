@@ -11,6 +11,7 @@ import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.scheduler.BukkitRunnable;
 
 
 
@@ -23,25 +24,53 @@ public class Command_dramaalert extends FreedomCommand
        public boolean run(final CommandSender sender, Player playerSender, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
  {
-        FUtil.bcastMsg(ChatColor.translateAlternateColorCodes('&', "&aPREPARE FOR SPAM!!!!!!"));
-         try {
-    Thread.sleep(5000);                 //1000 milliseconds is one second.
-} catch(InterruptedException ex) {
-    Thread.currentThread().interrupt();
-}
-        FUtil.bcastMsg(ChatColor.translateAlternateColorCodes('&', "&aWHAT IS UPP DRAMAALERT NATIONNNN"));
-                 try {
-    Thread.sleep(2000);                 //1000 milliseconds is one second.
-} catch(InterruptedException ex) {
-    Thread.currentThread().interrupt();
-}
-        FUtil.bcastMsg(ChatColor.translateAlternateColorCodes('&', "&aI'M YOUR HOST, " + sender.getName() + "!!!!!"));
-         try {
-    Thread.sleep(1000);                 //1000 milliseconds is one second.
-} catch(InterruptedException ex) {
-    Thread.currentThread().interrupt();
-}
-        FUtil.bcastMsg(ChatColor.translateAlternateColorCodes('&', "&aLET'S GET RIIIIIIIGGGHHTTT INTO THE NEWS!"));
+     
+     new BukkitRunnable()
+    {
+      public void run()
+      {
+        msg(ChatColor.translateAlternateColorCodes('&', "&aPREPARE FOR SPAM!!!!!!"));
+      }
+    }
+    
+
+      .runTaskLater(this.plugin, 20L);
+     
+     new BukkitRunnable()
+    {
+      public void run()
+      {
+        msg(ChatColor.translateAlternateColorCodes('&', "&aWHAT IS UPP DRAMAALERT NATIONNNN"));
+      }
+    }
+    
+
+      .runTaskLater(this.plugin, 30L);
+    
+     new BukkitRunnable()
+    {
+      public void run()
+      {
+       msg(ChatColor.translateAlternateColorCodes('&', "&aI'M YOUR HOST, " + sender.getName() + "!!!!!"));
+      }
+    }
+    
+
+      .runTaskLater(this.plugin, 40L);
+    
+
+    new BukkitRunnable()
+    {
+      public void run()
+      {
+        msg(ChatColor.translateAlternateColorCodes('&', "&aLET'S GET RIIIIIIIGGGHHTTT INTO THE NEWS!"));
+      }
+    }
+    
+
+      .runTaskLater(this.plugin, 50L);
+    
+       
   
     return true;
     
