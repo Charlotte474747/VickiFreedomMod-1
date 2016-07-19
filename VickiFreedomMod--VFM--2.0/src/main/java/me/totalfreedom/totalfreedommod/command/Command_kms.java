@@ -20,7 +20,7 @@ public class Command_kms extends FreedomCommand
        public boolean run(final CommandSender sender, Player playerSender, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
  {
-        final Player player = getPlayer(args[0]);
+        Player player = (Player) sender;
         FUtil.bcastMsg(ChatColor.translateAlternateColorCodes('&', "&c" + sender.getName() + " has chosen the easy way out!"));
          try {
     Thread.sleep(1000);                 //1000 milliseconds is one second.
