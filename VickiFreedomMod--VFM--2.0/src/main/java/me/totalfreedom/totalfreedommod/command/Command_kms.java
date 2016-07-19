@@ -12,7 +12,7 @@ import org.bukkit.entity.Player;
 
 
 @CommandPermissions(level = Rank.OP, source = SourceType.BOTH)
-@CommandParameters(description = "Kill yourself", usage = "/<command>" aliases = "killmyself")
+@CommandParameters(description = "Kill yourself", usage = "/<command>", aliases = "killmyself")
 public class Command_kms extends FreedomCommand
 {
 
