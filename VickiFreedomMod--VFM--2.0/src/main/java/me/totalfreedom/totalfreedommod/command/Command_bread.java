@@ -19,8 +19,8 @@ import org.bukkit.inventory.meta.ItemMeta;
 public class Command_bread extends FreedomCommand
 {
 
-    public static final String BREAD_LYRICS = "When life gives you bananas";
-     private static final List<String> BREAD_LORE = Arrays.asList(ChatColor.RED + "You gotta make some ", ChatColor.YELLOW + " Banana bread");
+    public static final String BREAD_LYRICS = "When life gives you bananas, you have to make some banana bread!";
+     private static final List<String> BREAD_LORE = Arrays.asList(ChatColor.RED + "Yum ", ChatColor.YELLOW + " Yum");
     private final Random random = new Random();
 
     @Override
