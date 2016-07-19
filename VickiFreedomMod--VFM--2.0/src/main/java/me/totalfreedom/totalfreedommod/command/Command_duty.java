@@ -9,7 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(level = Rank.SUPER_ADMIN, source = SourceType.ONLY_IN_GAME)
-@CommandParameters(description = "Spy on commands", usage = "/<command>", aliases = "commandspy")
+@CommandParameters(description = "Duty!", usage = "/<command>", aliases = "d")
 public class Command_duty extends FreedomCommand
 {
 
@@ -19,7 +19,7 @@ public class Command_duty extends FreedomCommand
 
         FPlayer playerdata = plugin.pl.getPlayer(playerSender);
         playerdata.setDuty(!playerdata.onDuty());
-        FUtil.bcastMsg(sender.getName() + " is now " + (playerdata.onDuty() ? " off-duty" : " on-duty"), ChatColor.RED);
+        FUtil.bcastMsg(sender.getName() + " is now" + (playerdata.onDuty() ? " off-duty" : " on-duty"), ChatColor.RED);
 
         return true;
     }
