@@ -20,7 +20,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 @CommandParameters(description = "Its tasty, why not?", usage = "/<command> [-a]")
 public class Command_bacon extends FreedomCommand
 {
-    public static final String BACON_LYRICS = "Theres /cake and /cookie, but heres something more tasty, you're welcome";
+    public static final String BACON_LYRICS = "Hmm, what's that smell? CHICKEN? BREAD? CAKE? COOKIE? NOPE IT'S BACON!";
     private static final List<String> BACON_LORE = Arrays.asList(ChatColor.RED + "Its Tasty", ChatColor.BLUE + "#BaconIsLoveBaconIsLife");
     private final Random random = new Random();
 
