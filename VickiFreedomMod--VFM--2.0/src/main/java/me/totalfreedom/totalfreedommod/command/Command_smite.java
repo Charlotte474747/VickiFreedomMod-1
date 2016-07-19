@@ -31,7 +31,11 @@ public class Command_smite extends FreedomCommand
         {
             reason = StringUtils.join(args, " ", 1, args.length);
         }
-
+         if (isAdmin(player))
+        {
+            msg(ChatColor.RED + "You can not smite administrators");
+            return true;
+        }
         if (player == null)
         {
             msg(FreedomCommand.PLAYER_NOT_FOUND);
@@ -40,11 +44,7 @@ public class Command_smite extends FreedomCommand
 
         smite(player, reason);
         return true;
-         if (plugin.al.isAdmin(player))
-        {
-            msg(ChatColor.RED + "You can not smite administrators");
-            return true;
-        }
+         
     }
 
     public static void smite(Player player)
