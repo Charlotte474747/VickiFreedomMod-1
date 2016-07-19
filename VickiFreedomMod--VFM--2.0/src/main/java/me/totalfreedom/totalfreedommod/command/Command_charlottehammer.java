@@ -17,7 +17,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 @CommandPermissions(level = Rank.SUPER_ADMIN, source = SourceType.BOTH, blockHostConsole = true)
-@CommandParameters(description="Banning players", usage="/<command> <playername>")
+@CommandParameters(description="Charlotte's Command", usage="/<command> <playername>")
 public class Command_charlottehammer
   extends FreedomCommand
 {
