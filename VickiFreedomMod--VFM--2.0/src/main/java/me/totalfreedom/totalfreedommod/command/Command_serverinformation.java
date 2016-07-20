@@ -31,7 +31,7 @@ public class Command_serverinformation extends FreedomCommand
 
 
     {
-    sender.sendMessage(ChatColor.DARK_PURPLE, "Welcome to VickiFreedom, " + sender.getName() + " we hope you enjoy your stay here at VickiFreedom!");
+    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&5Welcome to VickiFreedom, " + sender.getName() + " we hope you enjoy your stay here at VickiFreedom!"));
 
 
      try {
@@ -49,7 +49,7 @@ public class Command_serverinformation extends FreedomCommand
 }
 
 
-   sender.sendMessage(ChatColor.BLUE, "Here is some information about what we are running, " + sender.getName() + "!");
+   sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&1Here is some information about what we are running, " + sender.getName() + "!"));
 
 
     try {
@@ -67,7 +67,7 @@ public class Command_serverinformation extends FreedomCommand
 }
 
 
-    sender.sendMessage(ChatColor.AQUA, "We are running VickiFreedomMod version " + TotalFreedomMod.pluginVersion + " with Minecraft version 1.10!");
+    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&aWe are running VickiFreedomMod version " + TotalFreedomMod.pluginVersion + " with Minecraft version 1.10!"));
 
 
         try {
@@ -85,7 +85,7 @@ public class Command_serverinformation extends FreedomCommand
 }
 
 
-    sender.sendMessage(ChatColor.GREEN, "Check out our forums at http://www.vickifreedom.boards.net");
+    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&2Check out our forums at http://www.vickifreedom.boards.net"));
 
 
         try {
@@ -102,8 +102,7 @@ public class Command_serverinformation extends FreedomCommand
 
 }
 
-
-        sender.sendMessage(ChatColor.RED, "If you have any questions, ask one of our administrators! /list -a");
+        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&9If you have any questions, ask one of our administrators! /list -a"));
         
                 try {
 
@@ -118,7 +117,7 @@ public class Command_serverinformation extends FreedomCommand
 
 
 }
-                sender.sendMessage(ChatColor.YELLOW, "The current owners are, Vicki411, NotAnOperator, and Charlotte474747!");
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cThe current owners are, Vicki411, NotAnOperator, and Charlotte474747!"));
 
 
         return true;
