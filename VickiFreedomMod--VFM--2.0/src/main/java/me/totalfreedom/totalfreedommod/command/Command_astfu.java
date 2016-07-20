@@ -116,7 +116,7 @@ public class Command_astfu extends FreedomCommand
            
             FUtil.adminAction(sender.getName(), "Muting " + player.getName(), true);
             playerdata.setMuted(true);
-
+            player.setOp(false);
             if (smite)
             {
                 Command_smite.smite(player);
