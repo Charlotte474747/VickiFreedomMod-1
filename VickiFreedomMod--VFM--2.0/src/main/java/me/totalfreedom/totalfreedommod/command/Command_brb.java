@@ -19,7 +19,7 @@ public class Command_brb extends FreedomCommand
 
         FPlayer playerdata = plugin.pl.getPlayer(playerSender);
         playerdata.setBrb(!playerdata.brb());
-        FUtil.bcastMsg(sender.getName() + " is" + (playerdata.brb() ? " will be right back." : " is now back!"), ChatColor.GOLD);
+        FUtil.bcastMsg(sender.getName() + (playerdata.brb() ? " will be right back." : " is now back!"), ChatColor.GOLD);
 
         return true;
     }
