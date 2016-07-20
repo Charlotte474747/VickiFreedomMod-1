@@ -31,7 +31,7 @@ public class Command_serverinformation extends FreedomCommand
 
 
     {
-    sender.sendMessage("Welcome to VickiFreedom, " + sender.getName() + " we hope you enjoy your stay here at VickiFreedom!" + ChatColor.RED);
+    sender.sendMessage(ChatColor.DARK_PURPLE, "Welcome to VickiFreedom, " + sender.getName() + " we hope you enjoy your stay here at VickiFreedom!");
 
 
      try {
@@ -49,13 +49,13 @@ public class Command_serverinformation extends FreedomCommand
 }
 
 
-   sender.sendMessage("Here is some information about what we are running, " + sender.getName() + "!" + ChatColor.RED);
+   sender.sendMessage(ChatColor.BLUE, "Here is some information about what we are running, " + sender.getName() + "!");
 
 
     try {
 
 
-    Thread.sleep(1000);                 //1000 milliseconds is one second.
+    Thread.sleep(3000);                 //1000 milliseconds is one second.
 
 
 } catch(InterruptedException ex) {
@@ -67,13 +67,13 @@ public class Command_serverinformation extends FreedomCommand
 }
 
 
-    sender.sendMessage("We are running VickiFreedomMod version " + TotalFreedomMod.pluginVersion + " with Minecraft version 1.10!" + ChatColor.RED);
+    sender.sendMessage(ChatColor.AQUA, "We are running VickiFreedomMod version " + TotalFreedomMod.pluginVersion + " with Minecraft version 1.10!");
 
 
         try {
 
 
-    Thread.sleep(1000);                 //1000 milliseconds is one second.
+    Thread.sleep(3000);                 //1000 milliseconds is one second.
 
 
 } catch(InterruptedException ex) {
@@ -85,13 +85,13 @@ public class Command_serverinformation extends FreedomCommand
 }
 
 
-    sender.sendMessage("Check out our forums at http://www.vickifreedom.boards.net" + ChatColor.RED);
+    sender.sendMessage(ChatColor.GREEN, "Check out our forums at http://www.vickifreedom.boards.net");
 
 
         try {
 
 
-    Thread.sleep(1000);                 //1000 milliseconds is one second.
+    Thread.sleep(3000);                 //1000 milliseconds is one second.
 
 
 } catch(InterruptedException ex) {
@@ -103,12 +103,12 @@ public class Command_serverinformation extends FreedomCommand
 }
 
 
-        sender.sendMessage("If you have any questions, ask one of our administrators! /list -a" + ChatColor.RED);
+        sender.sendMessage(ChatColor.RED, "If you have any questions, ask one of our administrators! /list -a");
         
                 try {
 
 
-    Thread.sleep(1000);                 //1000 milliseconds is one second.
+    Thread.sleep(3000);                 //1000 milliseconds is one second.
 
 
 } catch(InterruptedException ex) {
@@ -118,7 +118,7 @@ public class Command_serverinformation extends FreedomCommand
 
 
 }
-                sender.sendMessage("The current owners are, Vicki411, NotAnOperator, and Charlotte474747");
+                sender.sendMessage(ChatColor.YELLOW, "The current owners are, Vicki411, NotAnOperator, and Charlotte474747!");
 
 
         return true;
