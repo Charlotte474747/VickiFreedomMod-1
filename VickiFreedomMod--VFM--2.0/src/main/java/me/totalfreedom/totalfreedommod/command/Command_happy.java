@@ -25,7 +25,7 @@ public class Command_happy extends FreedomCommand
           return true;
       }
         
-        FUtil.bcastMsg(sender_p.getName() + " is SO HAPPY!.", ChatColor.GREEN);
+        FUtil.bcastMsg(sender_p.getName() + " is VERY HAPPY!.", ChatColor.GREEN);
         return true;
     }
 }
