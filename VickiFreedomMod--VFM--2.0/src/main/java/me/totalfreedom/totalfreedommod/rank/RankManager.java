@@ -58,7 +58,11 @@ public class RankManager extends FreedomService
         {
             return Title.VFMDEVELOPER;
         }
-
+        if (FUtil.VFMLEADDEVELOPERS.contains(player.getName()))
+        {
+            return Title.VFMLEADDEVELOPER;
+        }
+        
         final Rank rank = getRank(player);
 
         // Non-admins don't have titles, display actual rank

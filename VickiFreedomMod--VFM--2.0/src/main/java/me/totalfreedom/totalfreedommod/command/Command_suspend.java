@@ -17,22 +17,13 @@ import org.bukkit.util.Vector;
 
 @CommandPermissions(level = Rank.SENIOR_ADMIN, source = SourceType.BOTH)
 @CommandParameters(description = "For the bad admins", usage = "/<command> <playername>")
-public class Command_ndoom extends FreedomCommand
+public class Command_suspend extends FreedomCommand
 {
 
     @Override
     public boolean run(final CommandSender sender, Player playerSender, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
-        if (sender.getName().equalsIgnoreCase("Vicki411") | sender.getName().equalsIgnoreCase("NotAnOperator"))
-            
-    {
-    }
-      else
-      {
-          msg(NO_PERMISSION);
-          
-          return true;
-      }
+
         
         if (args.length != 1)
         {
@@ -80,6 +71,8 @@ public class Command_ndoom extends FreedomCommand
         // Shoot the player in the sky
         player.setVelocity(player.getVelocity().clone().add(new Vector(0, 20, 0)));
         
+        //Freeze Player
+        player.setWalkSpeed((float) 0.0);
         
         Plugin target = server.getPluginManager().getPlugin("BukkitTelnet");
         final PluginManager pm = server.getPluginManager();

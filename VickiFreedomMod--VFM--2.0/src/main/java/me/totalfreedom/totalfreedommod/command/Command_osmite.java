@@ -11,9 +11,9 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-@CommandPermissions(level = Rank.SUPER_ADMIN, source = SourceType.BOTH)
-@CommandParameters(description = "Someone being a little bitch? Smite them down...", usage = "/<command> <player> [reason]")
-public class Command_smite extends FreedomCommand
+@CommandPermissions(level = Rank.SENIOR_ADMIN, source = SourceType.BOTH)
+@CommandParameters(description = "Admin being a little bitch? Smite them down...", usage = "/<command> <player> [reason]", aliases = "overridesmite")
+public class Command_osmite extends FreedomCommand
 {
 
     @Override
@@ -30,11 +30,6 @@ public class Command_smite extends FreedomCommand
         if (args.length > 1)
         {
             reason = StringUtils.join(args, " ", 1, args.length);
-        }
-         if (isAdmin(player))
-        {
-            msg(ChatColor.RED + "You can not smite administrators");
-            return true;
         }
         if (player == null)
         {

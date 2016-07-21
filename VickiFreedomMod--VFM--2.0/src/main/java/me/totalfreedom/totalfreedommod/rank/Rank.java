@@ -11,6 +11,7 @@ public enum Rank implements Displayable
     OP("an", "Op", Type.PLAYER, "OP", ChatColor.RED),
     SUPER_ADMIN("a", "Super Admin", Type.ADMIN, "SA", ChatColor.AQUA),
     TELNET_ADMIN("a", "Telnet Admin", Type.ADMIN, "STA", ChatColor.DARK_GREEN),
+    TELNET_CLAN_ADMIN("a", "Telnet Clan Admin", Type.ADMIN, "TCA", ChatColor.GREEN),
     SENIOR_ADMIN("a", "Senior Admin", Type.ADMIN, "SrA", ChatColor.GOLD),
     TELNET_CONSOLE("the", "Console", Type.ADMIN_CONSOLE, "Console", ChatColor.DARK_PURPLE),
     SENIOR_CONSOLE("the", "Console", Type.ADMIN_CONSOLE, "Console", ChatColor.DARK_PURPLE),
@@ -20,6 +21,7 @@ public enum Rank implements Displayable
     EXECUTIVE_CONSOLE("the", "Console", Type.ADMIN_CONSOLE, "Console", ChatColor.DARK_PURPLE),
     SYSADMIN_CONSOLE("the", "Console", Type.ADMIN_CONSOLE, "Console", ChatColor.DARK_PURPLE),
     CHIP("is", "Chip", Type.ADMIN_CONSOLE, "Chip", ChatColor.GREEN),
+    PUG("a", "Pug", Type.ADMIN_CONSOLE, "Pug", ChatColor.GOLD),
     OWNER_CONSOLE("the", "Console", Type.ADMIN_CONSOLE, "Console", ChatColor.DARK_PURPLE);
     @Getter
     private final Type type;
@@ -111,6 +113,8 @@ public enum Rank implements Displayable
                 return OWNER_CONSOLE;
             case CHIP:
                 return CHIP;
+            case PUG:
+                return PUG;
             default:
                 return null;
         }
@@ -120,9 +124,11 @@ public enum Rank implements Displayable
     {
         switch (this)
         {
-            case TELNET_ADMIN:
-            case TELNET_CONSOLE:
-                return TELNET_ADMIN;
+            case TELNET_ADMIN: 
+            case TELNET_CONSOLE: 
+            case TELNET_CLAN_ADMIN: {
+                return TELNET_CONSOLE;
+            }
             case SENIOR_ADMIN:
             case SENIOR_CONSOLE:
                 return SENIOR_ADMIN;
@@ -137,6 +143,8 @@ public enum Rank implements Displayable
                 return OWNER;
             case CHIP:
             return CHIP;
+            case PUG:
+            return PUG;
             default:
                 return null;
         }

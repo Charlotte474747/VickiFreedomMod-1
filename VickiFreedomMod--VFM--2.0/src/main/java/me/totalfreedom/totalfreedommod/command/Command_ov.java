@@ -46,6 +46,7 @@ public class Command_ov extends FreedomCommand
 
         if (args.length == 0)
         {
+            msg(ChatColor.GOLD + "/ov <addme> <removeme> <sys> <sta> <sra> <owner> | [do] [command]");
             return false;
         }
 

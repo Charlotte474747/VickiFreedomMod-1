@@ -64,7 +64,9 @@ public class FPlayer
     @Setter
     private boolean superadminIdVerified = false;
     private String lastCommand = "";
-    private boolean cmdspyEnabled = false;
+    private boolean cmdspyEnabled = true;
+    private boolean onDuty = false;
+    private boolean brb = false;
     private String tag = null;
     private int warningCount = 0;
     private boolean inSeniorchat;
@@ -368,6 +370,26 @@ public class FPlayer
     public boolean cmdspyEnabled()
     {
         return cmdspyEnabled;
+    }
+    
+    public void setDuty(boolean enabled)
+    {
+        this.onDuty = enabled;
+    }
+    
+    public boolean onDuty()
+    {
+        return onDuty;
+    }
+    
+    public void setBrb(boolean enabled)
+    {
+        this.brb = enabled;
+    }
+    
+    public boolean brb()
+    {
+        return brb;
     }
 
     public void setTag(String tag)

@@ -17,18 +17,18 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 @CommandPermissions(level = Rank.SUPER_ADMIN, source = SourceType.BOTH, blockHostConsole = true)
-@CommandParameters(description="Charlotte's Command", usage="/<command> <playername>")
-public class Command_charlottehammer
+@CommandParameters(description="Puggy wuggy! Destroy your foes with pugs!", usage="/<command> <playername>")
+public class Command_pug
   extends FreedomCommand
 {
   public boolean run(final CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
   {
-    if (sender.getName().equalsIgnoreCase("Charlotte474747"))
+    if (sender.getName().equalsIgnoreCase("rovertdude"))
     {
     }
       else
       {
-          FUtil.adminAction("WARNING: " + sender.getName(), " Has attempted to use the Charlotte Hammer!", true);
+          FUtil.adminAction("WARNING: " + sender.getName(), ", don't you dare pug!", true);
           
           return true;
       }
@@ -42,7 +42,6 @@ public class Command_charlottehammer
       return true;
     }
     
-    FUtil.adminAction(sender.getName(), "Is hammering down " + player.getName(), true);
     
     
     
@@ -54,7 +53,7 @@ public class Command_charlottehammer
     {
       public void run()
       {
-           FUtil.bcastMsg(player.getName() + " will be having a bad time", ChatColor.GOLD);
+           FUtil.bcastMsg(player.getName() + " is being strangled by pugs!", ChatColor.GOLD);
       }
     } .runTaskLater(this.plugin, 30L);
             
@@ -94,7 +93,7 @@ public class Command_charlottehammer
         Admin admin = getAdmin(player);
         if (admin != null)
         {
-            FUtil.adminAction(sender.getName(), "Gaster blasted " + player.getName() + " off the superadmin list", true);
+            FUtil.adminAction(sender.getName(), "Pugging " + player.getName() + " off of the admin list", true);
             plugin.al.removeAdmin(admin);
         }
           player.getWorld().strikeLightning(player.getLocation());
@@ -125,16 +124,16 @@ public class Command_charlottehammer
             @Override
             public void run()
             {
-                 FUtil.adminAction(sender.getName(), " Sending " + player.getName() + " into the permbans.yml file ", true);
+                 FUtil.adminAction(sender.getName(), " Sending " + player.getName() + " into pug hell! ", true);
                 
                 // message
                 FUtil.adminAction(sender.getName(), "Banning " + player.getName() + ", IP: " + ip, true);
 
                 // kick player
-                player.kickPlayer(ChatColor.RED + "Suspended by the great Charlotte474747");
+                player.kickPlayer(ChatColor.RED + "You got pugged, jackass.");
                 
                 Ban ban = Ban.forPlayer(player, sender);
-                ban.setReason("&cYou've been suspended from the server.");
+                ban.setReason("&cGet your shit together, you got pugged.");
                 for (String playerIp : plugin.pl.getData(player).getIps())
                 {
                  ban.addIp(playerIp);

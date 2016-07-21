@@ -7,6 +7,7 @@ import static me.totalfreedom.totalfreedommod.util.FUtil.playerMsg;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
+import me.totalfreedom.totalfreedommod.rank.Rank;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -83,6 +84,13 @@ public class ChatManager extends FreedomService
             event.setCancelled(true);
             return;
         }
+        
+        if (fPlayer.inSeniorChat())
+        {
+            FSync.seniorChatMessage(player, message);
+            event.setCancelled(true);
+            return;
+        }
 
         // Finally, set message
         event.setMessage(message);
@@ -115,6 +123,21 @@ public class ChatManager extends FreedomService
             }
         }
     }
+    
+    public void seniorChat(CommandSender sender, String message)
+    {
+        String name = sender.getName() + " " + plugin.rm.getDisplay(sender).getColoredTag() + ChatColor.WHITE;
+        FLog.info("[SENIOR] " + name + ": " + message);
+
+        for (Player player : server.getOnlinePlayers())
+        {
+            if (plugin.al.isSeniorAdmin(player))
+            {
+                player.sendMessage("[" + ChatColor.AQUA + "SENIOR" + ChatColor.WHITE + "] " + ChatColor.DARK_RED + name + ": " + ChatColor.GOLD + message);
+            }
+        }
+    }
+
 
     public void reportAction(Player reporter, Player reported, String report)
     {
